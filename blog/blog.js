@@ -1,5 +1,3 @@
-// blog.js
-
 const articles = [
   {
     id: 1,
@@ -30,18 +28,14 @@ const articles = [
   }
 ];
 
-// Function to render all articles dynamically
 function renderArticles() {
   const articleSection = document.querySelector(".articles");
   
-  // Clear any placeholder content
   articleSection.innerHTML = "";
 
-  // Loop through each article and create HTML
   articles.forEach(article => {
     const articleEl = document.createElement("article");
 
-    // Left side details
     const details = document.createElement("div");
     details.classList.add("details");
     details.innerHTML = `
@@ -52,7 +46,6 @@ function renderArticles() {
       <p class="stars">Rating: ${article.stars}</p>
     `;
 
-    // Right side content
     const content = document.createElement("div");
     content.classList.add("content");
     content.innerHTML = `
@@ -67,5 +60,4 @@ function renderArticles() {
   });
 }
 
-// Run the function after the page loads
 document.addEventListener("DOMContentLoaded", renderArticles);
