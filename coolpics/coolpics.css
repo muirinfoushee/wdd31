@@ -1,18 +1,22 @@
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: rgb(221, 221, 221)
+  background-color: rgb(221, 221, 221);
 }
 
 h1, h2, h3 {
   font-weight: bold;
 }
+h3 {
+  text-align: center;
+  font-size: 1.8em;
+}
 
-a:link,
-a:visited {
+a:link, a:visited {
   color: #f45b69;
   text-decoration: none;
 }
@@ -27,36 +31,43 @@ header, footer {
   text-align: center;
 }
 
+
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 nav li {
-  display: inline-block;
-  margin: 0 .5rem;
+  display: block;
+  margin: 0.5rem 0;
 }
 
+.menu-button {
+  background-color: #f45b69;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
+  text-align: center;
 }
 
 .gallery img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 auto; 
   border-radius: 4px;
-  gap: 10px;
-  padding: 5px;
 }
-h3 {
-    text-align: center;
+
+.hide {
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -67,9 +78,49 @@ h3 {
 
 @media screen and (min-width: 800px) {
   .gallery {
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  header h2 {
-    display: none;
+
+  .menu-button {
+    display: none; 
   }
+
+  .menu {
+    display: block !important; 
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 .5rem;
+  }
+}
+
+.image-viewer {
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-viewer img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.image-viewer .close-viewer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f45b69;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
 }
