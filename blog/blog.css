@@ -1,3 +1,4 @@
+/* General Body */
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #473144;
@@ -6,43 +7,22 @@ body {
   padding: 0;
 }
 
+/* Headings */
 h1, h2, h3 {
   font-family: 'Lora', serif;
   color: #AF1B3F;
 }
 
+/* Links */
 a {
   color: #EFC69B;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-.main-nav {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: end;
-  list-style: none;
-  padding: 0;
-}
 
-.main-nav li {
-  margin-left: 20px;
-}
-main {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
-  padding: 20px;
-}
-article {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 10px;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-}
+/* Skip to content link */
 .skiptocontent a {
   position: absolute;
   top: -40px;
@@ -54,4 +34,78 @@ article {
 }
 .skiptocontent a:focus {
   top: 0;
+}
+
+/* Header */
+header h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.5em;
+}
+
+/* Navigation */
+header nav {
+  border-top: 2px solid #AF1B3F;   /* line above menu */
+  border-bottom: 2px solid #AF1B3F; /* line below menu */
+  padding: 10px 0;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;  /* center menu items */
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav li {
+  margin-left: 20px;
+}
+
+/* Main layout */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Articles */
+article {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* Filters aside */
+aside.filters {
+  padding: 10px;
+}
+
+/* Images inside articles */
+article img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Article content */
+article .content h2 {
+  margin-top: 0;
+}
+
+/* Article details */
+.details p {
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #AF1B3F;
+  color: #fff;
+  font-size: 0.9em;
 }
