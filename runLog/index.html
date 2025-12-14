@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>RunLog</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div class="header-left">
+    <img src="RunLog.png" alt="RunLog logo" class="logo">
+    <h1>RunLog</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="addRun.html">Add Run</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Track Your Runs</h2>
+      <p>Set weekly goals, log miles, and stay consistent.</p>
+    </div>
+    <img src="pexels-runffwpu-3039888_resized.jpg" alt="Runner in race">
+  </section>
+
+  <section>
+    <h2>Weekly Goal</h2>
+    <input type="number" id="goalInput" placeholder="Miles for this week">
+    <button onclick="setGoal()">Set Goal</button>
+  </section>
+
+  <section>
+    <h2>Progress</h2>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p id="progressText">0 / 0 miles</p>
+  </section>
+
+
+  <section>
+    <h2>How RunLog Works</h2>
+    <div class="feature-grid">
+
+      <div class="feature">
+        <img src="target.svg" class="icon">
+        <img src="pexels-cottonbro-5319382_resized.jpg" alt="Stretching runner">
+        <p>Set your weekly mileage goal</p>
+      </div>
+
+        <a href="addRun.html" class="feature feature-link">
+        <img src="plus-circle.svg" class="icon">
+        <img src="pexels-helder-pereira-326724210-33378438_resized.jpg" alt="Sunset run">
+        <p>Add runs quickly</p>
+        </a>
+
+
+      <div class="feature">
+        <img src="calendar.svg" class="icon">
+        <img src="pexels-n-voitkevich-4939455_resized.jpg" alt="Beach run">
+        <p>Track by date</p>
+      </div>
+
+      <div class="feature">
+        <img src="activity.svg" class="icon">
+        <img src="pexels-ketut-subiyanto-5039659_resized.jpg" alt="City run">
+        <p>Watch your progress grow</p>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <h2>Run Anywhere</h2>
+    <div class="image-row">
+      <img src="pexels-rethaferguson-3623180_resized.jpg" alt="Coastal run">
+      <img src="pexels-orestsv-1821694_resized.jpg" alt="Mountain run">
+      <img src="pexels-runffwpu-3039888_resized.jpg" alt="Race run">
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
